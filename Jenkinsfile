@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage ('SCM Checkout'){
             steps {
-                git "https://github.com/shanmukhashan022/shan-ansible.git"
+                git "https://github.com/shekar55/shekar-ansible.git"
             }
         }
         stage('Execute Ansible'){
