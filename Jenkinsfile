@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage ('SCM Checkout'){
             steps {
-                git "https://github.com/shekar55/shekar-ansible.git"
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/shekar55/shekar-ansible.git']])
             }
         }
         stage('Execute Ansible'){
